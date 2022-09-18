@@ -11,6 +11,12 @@ import java.time.Duration;
 public class C01_JUnit {
     /*
     MAIN METHOD DÖNEMİ BİTMİŞTİR...
+
+    Şimdiye kadar Java'da bir class'in calismasi icin main method sarttir diyorduk
+    @Test notasyonu ile bu mecburiyet bitti
+
+    @Test notasyonu olmayan method'lar bugune kadar yaptigimiz gibi sadece cagrildiklarinda calisir
+    Ancak @Test eklendiginde bagimsiz calisabilir hale gelir
      */
 
     @Test

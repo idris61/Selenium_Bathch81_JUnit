@@ -18,6 +18,12 @@ public class C03_BeforeClass_AfterClass {
         - son olarak AfterClass'ı çalıştırdı
 
     *** Çalışmasını istemediğimiz test için; Test notasyonunun altına @Ignore notasyonu yazılır.
+
+    Olusturdugumuz test class'inin icindeki test method'lari hep ayni web sitesi ile ilgili ise
+    her seferinde yeniden driver olusturmaya
+    ve her method icin bu driver'i kapatmaya gerek yoktur
+    Class'in basinda bir kere setup calisip, en sonda kapansa olur dersek BeforeClass ve AfterClass kullaniriz
+
      */
 
     static WebDriver driver;
