@@ -25,6 +25,10 @@ public class C03_BeforeClass_AfterClass {
     Class'in basinda bir kere setup calisip, en sonda kapansa olur dersek BeforeClass ve AfterClass kullaniriz
 
      */
+    /*
+    NOT-1 : JUnit'te methodların hangi sıraya göre çalışacağına biz karar veremiyoruz. JUnit'in dezavantajı / kafasına göre takılıyor.
+    NOT-2 : TestNG harf sırasına göre methodları çalıştırıyor. Öncelik bildiren priority notasyonu kullanarak da öncelik sırası belirlenebilir.
+     */
 
     static WebDriver driver;
     @BeforeClass

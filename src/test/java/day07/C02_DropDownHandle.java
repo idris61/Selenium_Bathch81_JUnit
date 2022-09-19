@@ -16,6 +16,30 @@ import java.time.Duration;
 import java.util.List;
 
 public class C02_DropDownHandle {
+                    //-/-/ Dropdown ==> AÇILIR MENÜ) /-/-//
+
+    /*
+     dropdown denince aklımıza --> select tagı gelecek
+     1. Adım : Dropdown menüyü herhangi bir locator ile locate edin
+
+     WebElement ddm = driver.findElement(By.xpath("......."))
+
+     2. Adım : Yeni bir "SELECT" objesi oluşturun ve daha önce locate ettiğimiz WebElement'i parametre olarak
+     yeni objeye ekleyin
+
+     Select options = new Select(ddm)
+
+     3. Adım : Select class'ından kullanabileceğimiz 3 yöntemden biriyle dropdown menüsündeki elemanlardan istediğinizi seçin
+
+            1. Index kullanarak     ==> selectByIndex();
+            2. Deger kullanarak     ==> selectByValue();
+            3. Gorunen degerini kullanarak  ==> selectByVisibleText();
+
+            Istenirse getOptions(); methodu kullanilarak DropDown’daki tum elementler webelementlerden olusan
+                                    bir listeye konabilir.List<WebElement>
+
+     */
+
     /*
     ●Bir class oluşturun:C3_DropDownAmazon
     ●https://www.amazon.com/ adresinegidin.

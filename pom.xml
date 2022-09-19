@@ -13,6 +13,7 @@
         <maven.compiler.target>18</maven.compiler.target>
     </properties>
     <dependencies>
+        <!-- Ekleyeceğimiz tüm dependency'leri, dependencies taginin içine eklemeliyiz-->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

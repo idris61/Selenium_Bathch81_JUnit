@@ -12,6 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C04_JUnitChecBox {
+    /*
+        CHECKBOX ---> SEÇİLİ/DEĞİL İSE ===> checkbox.isSelected() methodu ile kontrol ediyoruz.
+        checkbox ta kutucuklar bir birinden bağımsızdır.
+        radio button da ise birini seçince diğerini/diğerlerini seçemeyiz. birbiri ile bağımlıdır.
+     */
 
     /*
       a. Verilen web sayfasına gidin.
@@ -48,7 +53,7 @@ public class C04_JUnitChecBox {
         if(!checkbox1.isSelected()) {
             checkbox1.click();
         }
-                // d. Checkbox2 seçili değilse onay kutusunu tıklayın
+        // d. Checkbox2 seçili değilse onay kutusunu tıklayın
         Thread.sleep(2000);
         if(!checkbox2.isSelected()) {
             checkbox2.click();

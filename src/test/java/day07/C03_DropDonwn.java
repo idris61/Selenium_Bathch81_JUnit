@@ -61,24 +61,29 @@ public class C03_DropDonwn {
     }
     @Test
     public void test2() {
-//           1.Kategori menusunden Books secenegini secin
+
+        // 1.Kategori menusunden Books secenegini secin
         WebElement ddm = driver.findElement(By.xpath("//*[@id='searchDropdownBox']"));
         select = new Select(ddm);
 
         //select.selectByVisibleText("Books"); // Eğer Dropdown menudeki option'a string olarak ulaşmak istersek bu methodu kullanırız
         //select.selectByIndex(5); // Eğer dropdown menusünun index'i ile ulasmak istersek bu methodu kullanırız
         select.selectByValue("search-alias=stripbooks-intl-ship"); // Eğer dropdown menusundeki optiona value ile ulaşmak istersek bu methodu kullanırız
+
          /*
         Dropdown menude seçtiğimiz optiona ulaşmak istersek select.getFirstSelectedOption()
         methodunu kullanırız
          */
         System.out.println(select.getFirstSelectedOption().getText());
-//           2.Arama kutusuna Java yazin ve aratin
+
+        // 2.Arama kutusuna Java yazin ve aratin
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Java", Keys.ENTER);
-//           3.Bulunan sonuc sayisiniyazdirin
+
+        // 3.Bulunan sonuc sayisiniyazdirin
         WebElement sonucYazisi = driver.findElement(By.xpath("//*[@class='a-section a-spacing-small a-spacing-top-small']"));
         System.out.println(sonucYazisi.getText());
-//           4.Sonucun Java kelimesini icerdigini testedin
+
+        // 4.Sonucun Java kelimesini icerdigini testedin
         String expectedKelime = "Java";
         String actualSonucYazisi = sonucYazisi.getText();
         Assert.assertTrue(actualSonucYazisi.contains(expectedKelime));

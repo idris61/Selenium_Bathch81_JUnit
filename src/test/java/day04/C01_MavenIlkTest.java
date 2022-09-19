@@ -11,6 +11,14 @@ import java.time.Duration;
 
 public class C01_MavenIlkTest {
     public static void main(String[] args) {
+        /*
+        Bugüne kadar yaptığımız ilk selenium projemizde ;
+            - driver ve selenium kütüphanesini manuel eklemek zorunda kalıyorduk
+            - driver'in her seferinde yolunu ve ismini kendimiz manuel olarak yazmak zorunda kalıyorduk
+
+        WebDriverManeger ve bonigarcia sayesinde artık böyle bir ihtiyacımız kalmadı.
+
+         */
 
       /*
        1- https://www.amazon.com/ sayfasina gidelim
