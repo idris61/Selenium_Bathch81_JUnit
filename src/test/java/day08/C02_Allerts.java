@@ -73,7 +73,8 @@ public class C02_Allerts {
         // Alert üzerindeki mesajı yazdırın
         System.out.println("2. Butonun Alert Mesaji = "+driver.switchTo().alert().getText());
         Thread.sleep(2000);
-        driver.switchTo().alert().dismiss();
+        driver.switchTo().alert().dismiss(); // uyarıya geçebilmek için ==> switchTo().alert() methodunu kullanıyoruz.
+                                             // Cancel(iptal) için ==> dismiss() methodunu kullanıyoruz.
 
         String actualMesaj = driver.findElement(By.xpath("//*[text()='You clicked: Cancel']")).getText();
         String expectedMesaj = "successfuly";
@@ -90,7 +91,7 @@ public class C02_Allerts {
         Thread.sleep(2000);
         System.out.println("3. Butonun Alert Mesaji : "+driver.switchTo().alert().getText());
         driver.switchTo().alert().sendKeys("Erol Evren");
-        driver.switchTo().alert().accept();
+        driver.switchTo().alert().accept(); // uyarıya geçip ok tuşuna basıyoruz.
         String actualMesaj = driver.findElement(By.xpath("//p[@id='result']")).getText();
         String expectedMesaj = "Erol Evren";
         Assert.assertTrue(actualMesaj.contains(expectedMesaj));
