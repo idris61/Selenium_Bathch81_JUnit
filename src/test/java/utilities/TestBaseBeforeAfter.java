@@ -11,6 +11,8 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
 public abstract class TestBaseBeforeAfter {
+    // abstract yapmamızın sebebi, bu class'dan obje üretilmesinin önüne geçmektir.
+
     protected WebDriver driver;
     protected Actions actions;
 
