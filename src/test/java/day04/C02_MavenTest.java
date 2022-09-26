@@ -52,7 +52,7 @@ public class C02_MavenTest {
             System.out.println("Test PASSED");
         }else System.out.println("Test FAILED");
 
-        driver.close();
+        //driver.close();
 
     }
 }

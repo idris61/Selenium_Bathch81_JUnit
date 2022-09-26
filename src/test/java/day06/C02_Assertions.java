@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C02_Assertion {
+public class C02_Assertions {
     /*
     Amazon sayfasina git
     3 farkli test method'u olustur

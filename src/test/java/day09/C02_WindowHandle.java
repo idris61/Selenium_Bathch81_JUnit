@@ -11,6 +11,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C02_WindowHandle {
+    /*
+            /-/-/-/     Handle Windows     /-/-/-/
+    ● Bazen bir butona tıkladığımızda, başkabir sekmede(tab) yeni bir pencere açılır.
+    ● Birden fazla pencereyle calişirken driver’a pencereler arasında gecis yaptirmamiz gerekir.
+    ● Pencereler arasında gecis yapmak icinwindow handle degerini kullaniriz.
+    ● window handle : Selenium WebDriver’in, WebDriver objesi başlatıldığında her pencereye verdigi unique alfanumerik kimlik degeridir
+
+        Handle WindowsMethod’lari
+    1) Icinde oldugumuz sayfanin window handle degerini alma
+            driver.getWindowHandle();
+    2) Pencereler arasında geçiş yapma(switch)
+            driver.switchTo().window(sayfa1HandleDegeri);
+    3) Yeni tab olusturup geçiş yapma(switch)
+            driver.switchTo().newWindow(WindowType.TAB);
+    4) Yeni window olusturup geçişyapma(switch)
+            driver.switchTo().newWindow(WindowType.WINDOW);
+    5 ) Acik olan pencerelerin window handle degerlerini alma
+            driver.getWindowHandles();
+     */
     WebDriver driver;
     @Before
     public void setup() {

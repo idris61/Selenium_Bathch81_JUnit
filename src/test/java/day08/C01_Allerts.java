@@ -41,6 +41,27 @@ public class C01_Allerts {
                 - selectByVisibleText
      */
     /*
+                  //-/-/ Handle Allerts (Uyarıları Yönet) /-/-//
+    AlertNedir?
+    Alert kullanıcıya bir tür bilgi vermek veya belirli bir işlemi gerçekleştirme izni istemek için ekran bildirimi
+    görüntüleyen küçük bir mesaj kutusudur. Uyarı amacıyla da kullanılabilir.
+
+    HTMLAlerts : Bir alert ciktiginda sag click ile inspect yapabiliyorsak html alert’dir ve extra bir isleme gerek yoktur.
+
+    JsAlerts   : Js alerts inspect yapilamaz, ekstra isleme ihtiyac vardir.
+
+    Handle AllertMethods :
+    ● accept( )         => Bir uyarıda(alert) OK'ı tıklamaklaaynı.
+                            driver.switchTo( ).alert( ).accept();
+    ● dismiss()         => Bir uyarıda(alert) Cancel'ı tıklamaklaaynı.
+                            driver.switchTo( ).alert( ).dismiss();
+    ● getText()         => Uyarıdaki(alert) mesajı almakiçin.
+                            driver.switchTo( ).alert( ).getText();
+    ● sendKeys(“Text”)  => Uyarı(alert) text kutusuna text göndermekiçin
+                            driver.switchTo( ).alert( ).sendKeys("Text");
+
+     */
+    /*
     Herhangi bir web sitesine gidince veya bir web sitesinde herhangi bir işlem yaptığımızda
     ortaya çıkan uyarılara alert diyoruz.
 

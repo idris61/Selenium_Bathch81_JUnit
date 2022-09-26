@@ -39,19 +39,22 @@ public class C01_Iframe {
        Eğer bir webelementi doğru olarak locate etmemize rağmen, driver o webElement'i bulanıyorsa,
        webElement iframe içerinde olabilir. Bu durumda HTML kodlarını incelememiz gerekir.
 
-       Eğer bir webElement iframe içerisindeyse önce o iframe'e driver.switchTo().Frame(switch Yöntemi) ile geçmeliyiz.
+       ● Bir sayfada iframe varsa, Selenium bir iframe içindeki elementleri doğrudan göremez
+       ● switchTo( ) mettod’u ile iframe’e gecmenin 3 yolu vardir;
 
-       3 şekilde iframe' geçiş yapabiliriz.
-            - index
-            - name/id
-            - webElement olarak tanımlayarak
+           1) index ile ==> driver.switchTo( ).frame(index oftheiframe);//index 0’dan baslar
+
+           2) id veya name value ile ==> driver.switchTo( ).frame("id of the iframe");
+
+           3) WebElementile ==> driver.switchTo( ).frame(WebElement of the iframe);
 
        iframe, alert'ten farklıdır. switchTo() ile iframe geçince oradan çıkıncaya kadar driver o iframe'de kalır ve
        bu sürede asıl sayfadaki webElementleri göremez.
 
-       iframe'den çıkmak için 2 yöntem vardır.
-            - defaultContent() ==> ana sayfaya çıkar
-            - parentFrame() ==> bir üst frame'e çıkar.(iç içe iframe olan sayfalarda kullanılabilir.)
+       Iframe’den cikmak icin 2 komut vardir;
+            driver.switchTo().parentFrame();1 ust seviyedeki frame’ec ikartir
+            driver.switchTo( ).defaultContent( ); En ustteki frame’e cikmak icin kullanilir
+       Birden fazla iframe varsa gecislerde dikkatli olmak lazim.
      */
     /*
      ● Bir class olusturun: IframeTest
@@ -109,8 +112,8 @@ public class C01_Iframe {
         link yazi elementini doğru locate etmemize rağmen yazdırmadı. Çünkü yukarıda IFrame e geçiş yapmıştık.
         önce IFrame den çıkmamız lazım.
         Iframe’den cikmak icin 2 komut vardir;
-        driver.switchTo().parentFrame();      ==> 1 ust seviyedeki frame’ecikartir
-        driver.switchTo().defaultContent();   ==> En ustteki frame’e cikmak icinkullanilir
+        driver.switchTo().parentFrame();      ==> 1 ust seviyedeki frame’e cikartir
+        driver.switchTo().defaultContent();   ==> En ustteki frame’e cikmak icin kullanilir
          */
     }
 }

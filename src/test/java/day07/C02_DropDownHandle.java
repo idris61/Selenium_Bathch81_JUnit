@@ -16,8 +16,8 @@ import java.time.Duration;
 import java.util.List;
 
 public class C02_DropDownHandle {
-                    //-/-/ Dropdown ==> AÇILIR MENÜ) /-/-//
 
+                    //-/-/ Dropdown ==> (AÇILIR MENÜ) /-/-//
     /*
      dropdown denince aklımıza --> select tagı gelecek
      1. Adım : Dropdown menüyü herhangi bir locator ile locate edin
@@ -31,8 +31,8 @@ public class C02_DropDownHandle {
 
      3. Adım : Select class'ından kullanabileceğimiz 3 yöntemden biriyle dropdown menüsündeki elemanlardan istediğinizi seçin
 
-            1. Index kullanarak     ==> selectByIndex();
-            2. Deger kullanarak     ==> selectByValue();
+            1. Index kullanarak             ==> selectByIndex();
+            2. Deger kullanarak             ==> selectByValue();
             3. Gorunen degerini kullanarak  ==> selectByVisibleText();
 
             Istenirse getOptions(); methodu kullanilarak DropDown’daki tum elementler webelementlerden olusan
@@ -42,15 +42,15 @@ public class C02_DropDownHandle {
 
     /*
     ●Bir class oluşturun:C3_DropDownAmazon
-    ●https://www.amazon.com/ adresinegidin.
+    ●https://www.amazon.com/ adresine gidin.
     -Test1
-    Arama kutusunun yanindaki kategori menusundeki kategori sayisinin45
-    oldugunu testedin
+    Arama kutusunun yanindaki kategori menusundeki kategori sayisinin 45
+    oldugunu test edin
     -Test2
-    1.Kategori menusunden Books seceneginisecin
-    2.Arama kutusuna Java yazin vearatin
-    3.Bulunan sonuc sayisiniyazdirin
-    4.Sonucun Java kelimesini icerdigini testedin
+    1.Kategori menusunden Books secenegini secin
+    2.Arama kutusuna Java yazin ve aratin
+    3.Bulunan sonuc sayisini yazdirin
+    4.Sonucun Java kelimesini icerdigini test edin
     */
     WebDriver driver;
     @Before

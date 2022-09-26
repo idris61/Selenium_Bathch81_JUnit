@@ -34,11 +34,11 @@ public class C01_MavenIlkTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        // 1- https://www.amazon.com/ sayfasina gidelim
-        driver.get("https://www.amazon.com/");
+        //1-https://www.amazon.com/ sayfasina gidelim
+        driver.get("https://www.amazon.com");
 
-        // 2- arama kutusunu locate edelim
-        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
+        //2-arama kutusunu locate edelim
+        WebElement aramaKutusu = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 
         // 3- “Samsung headphones” ile arama yapalim
         aramaKutusu.sendKeys("Samsung headphones", Keys.ENTER);
