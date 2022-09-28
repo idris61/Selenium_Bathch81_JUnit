@@ -17,7 +17,7 @@ public class C04_FileExists {
         System.out.println(System.getProperty("user.home"));//C:\Users\idris ==> benim bilgisayarımın özel kısmını verir.
 
         // masaüstündeki text dosyasının varlığını test edin
-        // "C:\Users\idris\Desktop\text.txt"  // masa üstündeki dosyanın yolu
+        // "C:\Users\idris\Desktop\text.txt"  // masa üstündeki dosyanın yolu (home path)
         String dosyaYolu = System.getProperty("user.home")+"Desktop\\text.txt";
         System.out.println(dosyaYolu); // C:\Users\idrisDesktop\text.txt
 

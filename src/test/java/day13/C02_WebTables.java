@@ -65,3 +65,17 @@ public class C02_WebTables extends TestBaseBeforeAfter {
         actions.click(userName).sendKeys("manager").sendKeys(Keys.TAB).sendKeys("Manager1!").sendKeys(Keys.ENTER).perform();
     }
 }
+        /*
+        <table>                 ===>>>> table
+            <thead>             ===>>>> header
+                <tr>            ===>>>> table rows
+                    <th> </th>  ===>>>> table header dat
+                </tr>
+            </thead>
+            <tbody>             ===>>>> table body
+              <tr>              ===>>>> table row
+                <td></td>       ===>>>> table data-cell
+              </tr>
+            </tbody>
+        </table>
+         */

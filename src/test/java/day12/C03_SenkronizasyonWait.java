@@ -63,18 +63,28 @@ public class C03_SenkronizasyonWait extends TestBaseBeforeAfter {
     Waitler ile 3 çeşit Wait Vardır.
     1) Thread.sleep(3000);  Java tabanlı waittir. Kodları yazılan süre kadar bekler,Süre dolduktan sonra alt satıra geçer.
 
-    2) İmplicitlyWait: Selenium tabanlı waittir.  Sayfadaki tüm öğeler için global bir zaman aşımıdır.(timeout)
+    2) İmplicitly Wait: Selenium tabanlı waittir.  Sayfadaki tüm öğeler için global bir zaman aşımıdır.(timeout)
     Arkadaşım 10 dakika içinde gelirse beraber gideriz, 10 dakikadan önce gelirse yine beraber gideriz,
     10 dakika içinde gelmezse ben eve dönerim. :) İmplicitlyWait
     Her işlem için tanıdığımız süre kadar bekler, işlem daha önce biterse devam eder.
     Bekle dediğimiz sürece bulamazsa "NoSuchElemtExeption" hatasını verir.
 
-    Not : Implicitlywait ile çözülebilecek durumlar için, explicitlyWait kullanıma ihtiyaç yoktur.
+    Implicitly wait’i TestBase class’ımızda kullanıyoruz.
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    Bu kod, driver’in sayfadaki herhangi bir weblement için maximum10 saniye beklemesini istediğimiz anlamına gelir.
+    Webelement 10 saniye içinde yüklenmezse, test case başarısız olur ve NoSuchElementExeption uyarısı verir.
 
-    3) ExplicitWait: Selenium tabanlı waittir. Çoğunlukla belirli öğeler için belirli bir koşul(expected condition) için kullanılır.
+    Not : Implicitly wait ile çözülebilecek durumlar için, explicitlyWait kullanıma ihtiyaç yoktur.
+
+    3) Explicit Wait: Selenium tabanlı waittir. Çoğunlukla belirli öğeler için belirli bir koşul(expected condition) için kullanılır.
     Arkadaşın gelene kadar bekle, gelince beraber gidin. Dosya indirilinceye kadar bekle.
-    WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(15));
-    WebElement element =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+    Nadiren karsimiza cikan ve daha fazla bekleme süresi gerektiren belirli öğeler(webelement) için explicitly wait kullanılır.
 
+    İlk olarak belirli miktarda bekleme süresi ile wait object create edilir.
+        WebDriverWait wait = newWebDriverWait(driver,Duration.ofSeconds(20));
+
+    Olusturdugumuz wait objesi sayesinde WebDriverWait class’indan until( ) method’u ile birlikte
+    ExpectedConditions Class’ini kullanabiliriz. Ornegin WebElement’i locate etmek icin wait object’i kullanma
+        WebElement element =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("...")));
      */
 

@@ -32,13 +32,22 @@ public class C03_Actions extends TestBaseBeforeAfter {
     action objesi kullanilarak baslayan her komut, calismak icin perform() bekler.
      */
         /*
-                Mouse BaseActions MouseAksiyonlari
+                Mouse BaseActions (Mouse Aksiyonlari)
 
         ➢ doubleClick ()    : WebElement’e çift tıklama yapar
         ➢ clickAndHold ()   : WebElement uzerinde click yapili olarak bizden komut bekler.
         ➢ dragAndDrop ()    : WebElement’i bir noktadan diğerine sürükler ve bırakır
         ➢ moveToElement ()  : Mouse’u istedigimiz WebElement’in uzerinde tutar
         ➢ contextClick ()   : Mouse ile istedigimiz WebElement’e sag tiklama yapar.
+         */
+        /*
+                Keyboard BaseActions (Klavye Aksiyonlari)
+
+         ➢Action Class’indan kullanacagimiz method’lar ile klavyedeki tuslari kontrol edebiliriz.
+        ■ sendKeys ()   : Öğeye bir dizi anahtar gönderir
+        ■ keyDown ()    : Klavyede tuşa basma işlemi gerçekleştirir
+        ■ keyUp ()      : Klavyede tuşu serbest bırakma işlemi gerçekleştirir
+
          */
 
         // Amazon sayfasına gidelim

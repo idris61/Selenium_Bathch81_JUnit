@@ -79,7 +79,7 @@ public class C03_DropDonwn {
         // 2.Arama kutusuna Java yazin ve aratin
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Java", Keys.ENTER);
 
-        // 3.Bulunan sonuc sayisiniyazdirin
+        // 3.Bulunan sonuc sayisini yazdirin
         WebElement sonucYazisi = driver.findElement(By.xpath("//*[@class='a-section a-spacing-small a-spacing-top-small']"));
         System.out.println(sonucYazisi.getText());
 

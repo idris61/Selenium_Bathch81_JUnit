@@ -70,3 +70,19 @@ public class C01_Cookie extends TestBaseBeforeAfter {
         Assert.assertTrue(tumCookie.isEmpty());
     }
 }
+    /*          /-/-/ Cookies /-/-/
+    Çerezler, belirli kullanıcıları tanımlamak ve bu kullanıcıların göz atma deneyimini iyileştirmek için kullanıcının
+    bilgisayarı ile web sunucusu arasında takas edilen, kullanıcı adı ve parola gibi küçük veri parçalarını
+    içeren dosyalardır.
+    İnternette gezinirken ziyaret ettiğiniz web sayfaları, bilgisayarınıza ve telefonunuza küçük bilgi dosyaları kaydeder.
+    Bu dosyalar telefon veya bilgisayarınızın hafızasında saklanır. Daha sonra aynı siteleri ziyaret ettiğinizde
+    bu kayıtlı bilgi dosyaları sayesinde siteler sizi tanıyabilir.
+
+        Selenium ile cookies otomasyonu yapabiliriz.
+        Driver.manage( ). method’u ile cookie’leri
+        - listeleyebilir
+        - Isim ile cagirabilir
+        - Yeni cookie ekleyebilir
+        - Var olanlari ismi silebilir
+        - Var olan tum cookie’leri silebiliriz
+     */

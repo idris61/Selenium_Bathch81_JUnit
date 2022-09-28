@@ -48,3 +48,17 @@ public class C01_ReadExcel {
     Sayfa1 e git --> Sheet
     Satiri bul --> Row
      */
+    /*
+                    Excel’inYapisi
+    ➢Excel icin daha once inceledigimiz Web Table yapisina benzer bir yapi vardir.
+    ➢Excel’de bir hucredeki bilgiye ulasmak icin
+        dosya/sayfa/satir/sutun sirasiylailerlemeliyiz
+
+    ➢Excel ile ilgili otomasyonda webtable’da oldugu gibi sutun yapisiy oktur, ihtiyac duyarsak kodla sutunu elde
+    edebiliriz ancak bir dataya ulasmak icin sutun kullanamayiz
+        Workbook    ==> excel dosyamiz
+        Sheet       ==> Her açık excel sekmesi (Sheet1, Sheet2,etc)
+        Row (satir) ==> Java, yalnızca içeride veri varsa satırları sayar.
+        Default olarak, Java perspektifinden satır sayısı 0'dır
+        Cells (hucre) ==> Java her satıra bakar ve yalnızca hücrede veri varsa hücre sayısını sayar.
+     */

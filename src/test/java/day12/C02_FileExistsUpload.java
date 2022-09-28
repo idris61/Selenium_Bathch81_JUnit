@@ -35,11 +35,19 @@ public class C02_FileExistsUpload extends TestBaseBeforeAfter {
 
     // https://the-internet.herokuapp.com/upload adresine gidelim
     driver.get("https://the-internet.herokuapp.com/upload");
+        /*
+        bu islemi selnium ile yapma imkanimiz yok cunku web tabanli bir uygulama degil
+        bu durumda sendKeys() imdadimiza yetisir
+        eger chooseFile butonuna var olan bir dosyanin dosya yolunu yollarsaniz
+        secme islemi otomatik olarak yapilmis olacaktir.
+         */
 
-    // Dosyasec butonuna basalim
+    // Dosya sec butonuna basalim  // 1.adim cjhoose file butonunu locate edelim
     WebElement dosyaSec=driver.findElement(By.xpath("//input[@id='file-upload']"));
 
-    // Yuklemek istediginiz dosyayi secelim
+    // Yuklemek istediginiz dosyayi secelim // 2.adim yuklenecek doyanin dosya yolunu olusturalim
+                                            // biz masaustundeki text.txt dosyasini yukleyelim
+                                            // 3. adim sendKeys ile dosya yolunu, secme butonuna yollayalim
     String dosyaYolu = "C:\\Users\\idris\\Desktop\\text.txt";
     dosyaSec.sendKeys(dosyaYolu);
 
@@ -52,4 +60,14 @@ public class C02_FileExistsUpload extends TestBaseBeforeAfter {
     }
 
 }
+    /*
+                    FileExist
+    ● Selenium ile windows uygulamalarını test edemiyoruz. Ama test etmek için JAVA kullanabiliriz.
+    ● Bilgisayarımızda bir dosya olup olmadığını(exist) kontrol etmek için Java'yı kullanabiliriz
+        ○ System.getProperty ( "user.dir"); icinde bulunulan klasörün yolunu (Path) verir
+        ○ System.getProperty ( "user.home"); bilgisayarimizda bulunan user klasörünü verir
+        ○ Files.exists (Paths.get (filePath)); Bilgisayarınızda dosyanın olup olmadığını kontrol eder
+    ● İndirilen bir dosyanın indirme klasörümüzde olup olmadığını kontrol etmek için buJava
+      konseptini kullanabiliriz
+     */
 
