@@ -55,6 +55,27 @@ public class C02_WebTables extends TestBaseBeforeAfter {
         // 4.satirdaki(row) elementleri konsolda yazdırın.
         System.out.println("Tablodaki 4. satır : "+driver.findElement(By.xpath("//tbody//tr[4]")).getText());
 
+        // 5. email başlığındaki tüm elementleri(sutun) konsolda yazdırınız.
+        // her satırdaki 3. datayı istiyor bizeden.
+        // önce email başlığının kaçıncı sutunda olduğunu bulalım.
+
+        List<WebElement> basliklarListesi = driver.findElements(By.xpath("//tead//tr[1]/th")); // başlıkları listeye koyduk
+        int emailSutunNo = 0;
+
+        for (int i = 0; i < basliklarListesi.size(); i++) {
+            if(basliklarListesi.get(i).getText().equals("Email")){
+                emailSutunNo = i;
+            } // başlıkları forloop ile gözden geçirip, bu başlıklardan hangisinin değeri "Email" ise onun sutununu kaydettik
+        }
+
+        List<WebElement> emailSutunListesi = driver.findElements(By.xpath("//tbody//td["+(emailSutunNo+1)+"]"));
+        // (emailSutunNo+1) ==> yapmamızın sebebi; list'imizin index'i 0'dan başlıyor, Table'ımızın index'i 1'dan başlıyor'
+        // //tbody//td[3] olarak yazsaydık sonuç aynı olurdu. amacımız kodu dinamik yapmak
+
+        for (WebElement each : emailSutunListesi) {
+            System.out.println(each.getText());
+        }
+
     }
 
     private void login() {
@@ -67,15 +88,25 @@ public class C02_WebTables extends TestBaseBeforeAfter {
 }
         /*
         <table>                 ===>>>> table
-            <thead>             ===>>>> header
-                <tr>            ===>>>> table rows
-                    <th> </th>  ===>>>> table header dat
+            <thead>             ===>>>> header (başlık)
+                <tr>            ===>>>> table rows (satırlar)
+                    <th> </th>  ===>>>> table header dat (başlıktaki datalar)
                 </tr>
             </thead>
             <tbody>             ===>>>> table body
               <tr>              ===>>>> table row
-                <td></td>       ===>>>> table data-cell
+                <td></td>       ===>>>> table data-cell (hücre)
               </tr>
             </tbody>
         </table>
+
+        *** Tablolarda sutun yapısı yoktur. table ==> thead ==> tr ==> th   (tablo ==> başlık ==> satır ==> data)
+         */
+        /*
+        tablo body'nin 3. satırının 5. cell'ine ulaşmak için ==> //tbody//tr[3]//td[5]
+
+        başlıktaki ilk stırdaki tüm detaylar ==> //tbody//td[4]
+
+        Eğer verilen satır ve sutun numarasına göre dinamik bir locate yapmak istersek;
+                "//tbody//tr["+satir+"]//td["+sutun+"]"
          */

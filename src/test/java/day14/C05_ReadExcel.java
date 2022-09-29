@@ -24,20 +24,20 @@ public class C05_ReadExcel {
         Workbook workbook = WorkbookFactory.create(fis);
 
         //-sayfa 2'ye gidip satir sayisinin 15, kullanilan satir sayisinin ise 4 oldugunu test edin
-        int sonSatir = workbook.getSheet("Sayfa2").getLastRowNum();
-        System.out.println(sonSatir);
+        int sonSatirIndex = workbook.getSheet("Sayfa2").getLastRowNum();
+        System.out.println(sonSatirIndex);
         int expectedLastRow = 15;
-        Assert.assertEquals(expectedLastRow,sonSatir+1);
+        Assert.assertEquals(expectedLastRow,sonSatirIndex+1);
 
-        int kullanilanSatir = workbook.getSheet("Sayfa2").getPhysicalNumberOfRows();
-                            // excel tablosunda kullanılan satır sayısını bu method ile alırız.
-        System.out.println(kullanilanSatir);
+        int kullanilanSatirSqyisi = workbook.getSheet("Sayfa2").getPhysicalNumberOfRows();
+                            //getPhysicalNumberOfRows(); ==> excel tablosunda kullanılan satır sayısını bu method ile alırız.
+        System.out.println(kullanilanSatirSqyisi);
         int expectedKullanilanSatir = 4;
-        Assert.assertEquals(expectedKullanilanSatir,kullanilanSatir);
+        Assert.assertEquals(expectedKullanilanSatir,kullanilanSatirSqyisi);
 
         /*
-        lastRow  --> en son yazilan satir
-        Physical --> kullanilan satir sayisi
+        getLastRowNum();            ==> methodu bize excel sayfasındaki son satır indexini getiriyor.
+        getPhysicalNumberOfRows();  ==> methodu bize excel tablosunda kullanılan satır sayısını verir
          */
 
     }

@@ -3,7 +3,7 @@ package A_2_JUnit_Tekrar;
 import org.junit.Test;
 import utilities.TestBaseBeforeAfter;
 
-public class Q27_IframeHomeWork extends TestBaseBeforeAfter {
+public class Q28_IframeHomeworkWork extends TestBaseBeforeAfter {
     @Test
     public void test() {
         //1.“http://webdriveruniversity.com/IFrame/index.html”sayfasinagidin

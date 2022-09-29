@@ -3,7 +3,7 @@ package A_2_JUnit_Tekrar;
 import org.junit.Test;
 import utilities.TestBaseBeforeAfter;
 
-public class Q36_WriteExcelClassWork extends TestBaseBeforeAfter {
+public class Q38_WriteExcellClassWork extends TestBaseBeforeAfter {
     @Test
     public void test() {
         //1)Yeni bir Class olusturalimWriteExcel
@@ -16,6 +16,5 @@ public class Q36_WriteExcelClassWork extends TestBaseBeforeAfter {
         //8)15.satir nufus kolonuna 54000yazdiralim
         //9)Dosyayi kaydedelim
         //10)Dosyayikapatalim
-
     }
 }

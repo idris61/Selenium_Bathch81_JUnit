@@ -3,9 +3,9 @@ package A_2_JUnit_Tekrar;
 import org.junit.Test;
 import utilities.TestBaseBeforeAfter;
 
-public class Q23_FileUploadClassWork extends TestBaseBeforeAfter {
+public class Q27_FileUploadClassWork extends TestBaseBeforeAfter {
     @Test
-    public void FileUploadTest() {
+    public void test() {
         //2.https://the-internet.herokuapp.com/upload adresinegidelim
         //3.chooseFile butonunabasalim
         //4.Yuklemek istediginiz dosyayisecelim.

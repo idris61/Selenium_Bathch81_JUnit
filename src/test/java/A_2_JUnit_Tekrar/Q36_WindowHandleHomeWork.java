@@ -1,9 +1,8 @@
 package A_2_JUnit_Tekrar;
 
 import org.junit.Test;
-import utilities.TestBaseBeforeAfter;
 
-public class Q28_WindowHandleHomeWork extends TestBaseBeforeAfter {
+public class Q36_WindowHandleHomeWork {
     @Test
     public void test() {
         //1."http://webdriveruniversity.com/"adresinegidin

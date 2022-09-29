@@ -39,17 +39,19 @@ public class C03_SenkronizasyonWait extends TestBaseBeforeAfter {
         //Remove butonuna basin.
         driver.findElement(By.xpath("//*[text()='Remove']")).click();
         //“It’s gone!” mesajinin goruntulendigini dogrulayin.
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement itsGoneWE = wait.until(ExpectedConditions.
-                visibilityOfElementLocated(By.xpath("//*[text()=\"It's gone!\"]")));
-        Assert.assertTrue(itsGoneWE.isDisplayed());
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // wait objesi oluşturduk
+        WebElement itsGoneWE = driver.findElement(By.xpath("//*[text()=\"It's gone!\"]"));// görünür olmasını istediğimiz elementi locate ettik
+        wait.until(ExpectedConditions.visibilityOf(itsGoneWE)); //it's gone! WE nin görünür olmasını bekle dedik
+        Assert.assertTrue(itsGoneWE.isDisplayed()); // sonra görünür olduğunu test et dedik
         /*
         explicitWait itsgoneWE görünür olmasını beklerken o web elementinin locatini kullanarak assert yapmak
         sorun olur ve exeption fırlatır. Henüz görülmeyen bir Webelementin locate edilmeside otamasyon için
         mümkün olmaz. Bu durumda bekleme işlemi için explicitWait'i locate ile birlikte kullanırız
          */
+
         //Add buttonuna basin
         driver.findElement(By.xpath("//*[text()='Add']")).click();
+
         //It’s back mesajinin gorundugunu test edin
         WebElement itsBackWE = wait.until(ExpectedConditions.
                 visibilityOfElementLocated(By.xpath("//*[@id='message']")));

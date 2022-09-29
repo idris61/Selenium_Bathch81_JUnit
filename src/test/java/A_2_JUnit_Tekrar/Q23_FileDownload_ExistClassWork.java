@@ -3,7 +3,7 @@ package A_2_JUnit_Tekrar;
 import org.junit.Test;
 import utilities.TestBaseBeforeAfter;
 
-public class Q21_FileDownload_ExistClassWork extends TestBaseBeforeAfter {
+public class Q23_FileDownload_ExistClassWork extends TestBaseBeforeAfter {
 
     @Test
     public void FileDownloadTest() {
