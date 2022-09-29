@@ -28,7 +28,7 @@ public abstract class TestBaseBeforeAfter {
         actions = new Actions(driver);
 
         LocalDateTime date = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYMMddHHnnss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYMMddHHmmss");
         tarih = date.format(formatter);
     }
     @After
