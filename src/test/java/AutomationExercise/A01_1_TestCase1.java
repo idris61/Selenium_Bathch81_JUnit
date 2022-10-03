@@ -12,7 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-public class TestCase1ActionsClassUygulama {
+public class A01_1_TestCase1 {
     @Test
     public void test01() {
         //1. Launch browser
