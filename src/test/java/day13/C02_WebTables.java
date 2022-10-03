@@ -17,6 +17,7 @@ public class C02_WebTables extends TestBaseBeforeAfter {
         //Bir class oluşturun : C02_WebTables
         //login( ) metodun oluşturun ve oturum açın.
         login();
+
         //https://www.hotelmycamp.com/admin/HotelRoomAdmin adresine gidin
         //Username : manager
         //Password : Manager1!
@@ -24,7 +25,13 @@ public class C02_WebTables extends TestBaseBeforeAfter {
         table();
 
     }
-
+    private void login() {
+        driver.get("https://www.hotelmycamp.com/admin/HotelRoomAdmin");
+        //driver.findElement(By.xpath("//input[@id='UserName']")).click();
+        Actions actions = new Actions(driver);
+        WebElement userName = driver.findElement(By.xpath("//input[@id='UserName']"));
+        actions.click(userName).sendKeys("manager").sendKeys(Keys.TAB).sendKeys("Manager1!").sendKeys(Keys.ENTER).perform();
+    }
     private void table() {
         //Tüm table body’sinin boyutunu(sutun sayisi) bulun.
         /*
@@ -78,13 +85,6 @@ public class C02_WebTables extends TestBaseBeforeAfter {
 
     }
 
-    private void login() {
-        driver.get("https://www.hotelmycamp.com/admin/HotelRoomAdmin");
-        //driver.findElement(By.xpath("//input[@id='UserName']")).click();
-        Actions actions = new Actions(driver);
-        WebElement userName = driver.findElement(By.xpath("//input[@id='UserName']"));
-        actions.click(userName).sendKeys("manager").sendKeys(Keys.TAB).sendKeys("Manager1!").sendKeys(Keys.ENTER).perform();
-    }
 }
         /*
         <table>                 ===>>>> table

@@ -9,34 +9,21 @@ import utilities.TestBaseBeforeAfter;
 
 public class C01_Action extends TestBaseBeforeAfter {
 
-    // HATA VERDİ TEKRAR BAKILACAK !!!!!!!!!!!!!!!!!!!!!
-
- // @Test
- // public void test(){
- //     // Automationexercise.com sitesine gidelim
- //     driver.get("https://automationexercise.com");
-
- //     // product bölümüne girelim
- //     driver.findElement(By.cssSelector("a[href=\"/products\"]")).click();
-
- //     // ilk ürüne tıklayalım
- //     Actions actions = new Actions(driver);
- //     actions.sendKeys(Keys.PAGE_DOWN).perform();
- //     driver.findElement(By.cssSelector("a[data-product-id=\"1\"]")).click();
- //
- //
- // }
     @Test
-    public void test01() {
-        //https://www.automationexercise.com/ adresine gidelim
-        driver.get("https://www.automationexercise.com/");
+    public void test() throws InterruptedException {
 
-        //product bölümüne girelim
-        driver.findElement(By.xpath("//*[@class='material-icons card_travel']")).click();
-        //ilk ürünü tıklayalım
+        // Automationexercise.com sitesine gidelim
+        driver.get("https://automationexercise.com");
+
+        // product bölümüne girelim
+        driver.findElement(By.cssSelector("a[href=\"/products\"]")).click();
+
+        // ilk ürüne tıklayalım
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        driver.findElement(By.xpath("//*[@class='fa fa-plus-square']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("(//i[@class='fa fa-plus-square'])[1]")).click();
+
     }
 }
 

@@ -20,14 +20,19 @@ public class C03_SenkronizasyonWait extends TestBaseBeforeAfter {
                 imlicitlyWait kullandığımız bu method'da sayfadaki bütün webelementler için
                 max belirttiğimiz süre altında bütün web elementler için bekler
                   */
+
         //https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+
         //Remove butonuna basin.
         driver.findElement(By.xpath("//*[text()='Remove']")).click();
+
         //“It’s gone!” mesajinin goruntulendigini dogrulayin.
         Assert.assertTrue(driver.findElement(By.xpath("//*[text()=\"It's gone!\"]")).isDisplayed());
+
         //Add buttonuna basin
         driver.findElement(By.xpath("//*[text()='Add']")).click();
+
         //It’s back mesajinin gorundugunu test edin
         Assert.assertTrue(driver.findElement(By.xpath("//*[@id='message']")).isDisplayed());
     }
@@ -36,13 +41,16 @@ public class C03_SenkronizasyonWait extends TestBaseBeforeAfter {
     public void explicitWaitTest2() {
         //https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+
         //Remove butonuna basin.
         driver.findElement(By.xpath("//*[text()='Remove']")).click();
+
         //“It’s gone!” mesajinin goruntulendigini dogrulayin.
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // wait objesi oluşturduk
         WebElement itsGoneWE = driver.findElement(By.xpath("//*[text()=\"It's gone!\"]"));// görünür olmasını istediğimiz elementi locate ettik
         wait.until(ExpectedConditions.visibilityOf(itsGoneWE)); //it's gone! WE nin görünür olmasını bekle dedik
         Assert.assertTrue(itsGoneWE.isDisplayed()); // sonra görünür olduğunu test et dedik
+
         /*
         explicitWait itsgoneWE görünür olmasını beklerken o web elementinin locatini kullanarak assert yapmak
         sorun olur ve exeption fırlatır. Henüz görülmeyen bir Webelementin locate edilmeside otamasyon için
@@ -63,6 +71,7 @@ public class C03_SenkronizasyonWait extends TestBaseBeforeAfter {
     Selenium'da Senkronizasyonu nasıl sağlarız?
 
     Waitler ile 3 çeşit Wait Vardır.
+
     1) Thread.sleep(3000);  Java tabanlı waittir. Kodları yazılan süre kadar bekler,Süre dolduktan sonra alt satıra geçer.
 
     2) İmplicitly Wait: Selenium tabanlı waittir.  Sayfadaki tüm öğeler için global bir zaman aşımıdır.(timeout)
